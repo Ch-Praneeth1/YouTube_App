@@ -1,7 +1,7 @@
 import React from 'react'
 
 const VideoCard = ({data}) => {
-   console.log(data);
+  //  console.log(data);
    const url = data?.snippet?.thumbnails?.medium?.url;
    const title = data?.snippet?.title;
    const channelName =  data?.snippet?.channelTitle;
