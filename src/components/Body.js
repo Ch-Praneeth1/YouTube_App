@@ -1,12 +1,12 @@
 import React from 'react'
 import SideBar from './SideBar'
-import VideoCotainer from './VideoCotainer'
+import MainContainer from './MainContainer'
 
 const Body = () => {
   return (
-    <div>Body
+    <div className='flex'>Body
         <SideBar/>
-        <VideoCotainer/>
+        <MainContainer/>
     </div>
   )
 }
