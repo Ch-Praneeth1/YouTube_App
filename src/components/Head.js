@@ -1,11 +1,21 @@
 import React from 'react'
+import { useDispatch } from 'react-redux';
+import { toggleSideBar } from '../utils/appSlice';
 
 const Head = () => {
+
+  const dispatch = useDispatch()
+
+  const toggleHandler = () =>{
+    dispatch(toggleSideBar())
+  };
+
+
   return (
     <div className='grid grid-flow-col p-2 m-2 shadow-lg'>
 
       <div className='flex col-span-1'>
-        <img  className='h-8 cursor-pointer' alt='hamburger menu' src='https://icons.veryicon.com/png/o/miscellaneous/linear-icon-45/hamburger-menu-5.png'></img>
+        <img onClick={()=> toggleHandler()} className='h-8 cursor-pointer' alt='hamburger menu' src='https://icons.veryicon.com/png/o/miscellaneous/linear-icon-45/hamburger-menu-5.png'></img>
         <img  className='h-8 cursor-pointer ml-2' alt='logo' src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/2560px-YouTube_Logo_2017.svg.png'></img>
       </div>
 

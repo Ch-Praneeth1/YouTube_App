@@ -1,6 +1,12 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 
 const SideBar = () => {
+
+  const isSideBarOpen = useSelector(store => store.app.sideBarOpen);
+
+  if(!isSideBarOpen) return null;
+  
   return (
     <div className='w-52 pl-4 shadow-lg'>
       <div className='border border-b-slate-500 pb-2 pt-2'>
